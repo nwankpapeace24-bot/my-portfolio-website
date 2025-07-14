@@ -2,26 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply text-gray-900;
+    font-family: var(--font-rubik);
+  }
+
+  h1 {
+    font-family: var(--font-sora);
+    font-weight: 700;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-sora);
+    font-weight: 600;
+  }
+
+  p {
+    font-family: var(--font-inter);
+  }
+
+  .accent-text {
+    font-family: var(--font-lexend);
+  }
+
+  .mono-text {
+    font-family: var(--font-jetbrains);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply bg-writer-deep-blue hover:bg-writer-sky-blue text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-writer-deep-blue text-writer-deep-blue px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-writer-deep-blue to-writer-sky-blue bg-clip-text text-transparent;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edebf5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8697c4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7091e6;
+}
+
+/* Custom selection */
+::selection {
+  background: #7091e6;
+  color: white;
+}
+
+::-moz-selection {
+  background: #7091e6;
+  color: white;
 }
