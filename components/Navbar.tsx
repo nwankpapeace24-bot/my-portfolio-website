@@ -104,9 +104,6 @@ const Navbar = () => {
               <h1 className="text-xl lg:text-2xl font-bold text-writer-deep-blue">
                 Peace Nwankpa
               </h1>
-              <p className="text-xs accent-text text-writer-cornflower -mt-1 tracking-wide">
-                iGaming • Crypto • Esports Writer
-              </p>
             </div>
           </motion.div>
 
