@@ -216,7 +216,7 @@ const Contact = () => {
                 {/* Main circular image container */}
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="relative ml-10 w-80 h-80 sm:w-96 sm:h-96 lg:w-[550px] lg:h-[550px] rounded-full overflow-hidden shadow-2xl border-8 border-white"
+                  className="relative lg:ml-10 w-80 h-80 sm:w-96 sm:h-96 lg:w-[550px] lg:h-[550px] rounded-full overflow-hidden shadow-2xl border-8 border-white"
                 >
                   <Image
                     src="/img-1.jpg"
