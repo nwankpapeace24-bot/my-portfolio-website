@@ -116,7 +116,7 @@ const Portfolio = () => {
       description:
         "In-depth look at 888Starz Casino's crypto gambling features and overall user experience.",
       image:
-        "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
       date: "May 2025",
       tags: ["Casino", "Sportsbook", "Crypto"],
       featured: false,

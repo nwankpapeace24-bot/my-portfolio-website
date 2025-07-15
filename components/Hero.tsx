@@ -58,16 +58,42 @@ const Hero = () => {
     },
   };
 
+  // Background decorations with delayed animation
+  const backgroundDecorationVariants = {
+    hidden: { 
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 1,
+        delay: 1.5, // Delay background decorations by 1.5 seconds
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-writer-powder via-writer-lavender to-writer-cornflower relative overflow-hidden flex items-center">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
+      {/* Background decorative elements - Now with delayed animation */}
+      <motion.div 
+        className="absolute inset-0"
+        variants={backgroundDecorationVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],
           }}
-          transition={{ duration: 8, repeat: Infinity }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity,
+            delay: 2, // Additional delay for the animation loop
+          }}
           className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-writer-sky-blue rounded-full mix-blend-multiply filter blur-xl"
         />
         <motion.div
@@ -75,7 +101,11 @@ const Hero = () => {
             scale: [1.2, 1, 1.2],
             opacity: [0.05, 0.2, 0.05],
           }}
-          transition={{ duration: 10, repeat: Infinity }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity,
+            delay: 2.2, // Staggered delay for natural appearance
+          }}
           className="absolute top-20 sm:top-40 right-5 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-writer-deep-blue rounded-full mix-blend-multiply filter blur-xl"
         />
         <motion.div
@@ -83,10 +113,14 @@ const Hero = () => {
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.25, 0.1],
           }}
-          transition={{ duration: 6, repeat: Infinity }}
+          transition={{ 
+            duration: 6, 
+            repeat: Infinity,
+            delay: 2.4, // Staggered delay for natural appearance
+          }}
           className="absolute -bottom-10 sm:-bottom-20 left-1/2 w-60 sm:w-80 h-60 sm:h-80 bg-writer-cornflower rounded-full mix-blend-multiply filter blur-xl"
         />
-      </div>
+      </motion.div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-20 pb-8 sm:pb-16">
         <motion.div
@@ -222,6 +256,25 @@ const Hero = () => {
             </div>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* Wave Bottom Edge */}
+      <div className="absolute -bottom-6 left-0 w-full overflow-hidden leading-none">
+        <svg
+          className="relative block w-full h-[60px] sm:h-[80px] lg:h-[100px]"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <motion.path
+            d="M0,120 L0,60 Q100,20 200,60 Q300,100 400,60 Q500,20 600,60 Q700,100 800,60 Q900,20 1000,60 Q1100,100 1200,60 L1200,120 Z"
+            fill="white"
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+          />
+        </svg>
       </div>
     </section>
   );
