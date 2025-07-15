@@ -9,6 +9,7 @@ import {
   FiHeart,
 } from "react-icons/fi";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   const containerVariants = {
@@ -132,15 +133,19 @@ const Hero = () => {
               variants={itemVariants}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start"
             >
-              <button className="group btn-primary flex items-center justify-center space-x-2 w-full sm:w-auto">
-                <FiBookOpen className="w-4 sm:w-5 h-4 sm:h-5" />
-                <span className="font-heading text-sm sm:text-base">
-                  Explore My Work
-                </span>
-              </button>
-              <button className="group btn-secondary font-heading text-sm sm:text-base w-full sm:w-auto">
-                Hire Me for Content Strategy
-              </button>
+              <Link href="#portfolio">
+                <button className="group btn-primary flex items-center justify-center space-x-2 w-full sm:w-auto">
+                  <FiBookOpen className="w-4 sm:w-5 h-4 sm:h-5" />
+                  <span className="font-heading text-sm sm:text-base">
+                    Explore My Work
+                  </span>
+                </button>
+              </Link>
+              <Link href="#contact">
+                <button className="group btn-secondary font-heading text-sm sm:text-base w-full sm:w-auto">
+                  Hire Me for Content Strategy
+                </button>
+              </Link>
             </motion.div>
           </div>
 
@@ -160,7 +165,7 @@ const Hero = () => {
                     src="/img-4.jpg"
                     alt="Peace Nwankpa - iGaming, Crypto & Esports Writer"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top"
                     priority
                   />
                   {/* Floating elements on image - Responsive sizing */}

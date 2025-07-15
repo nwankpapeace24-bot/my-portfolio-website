@@ -1,0 +1,37 @@
+Based on your portfolio as a crypto/gaming writer, here are the most logical sections to follow the "Who I Am" section, in order of priority:
+
+1. Services/What I Do (Most Important Next)
+A section showcasing your specific writing services:
+
+Crypto Content: Whitepapers, tokenomics, DeFi guides
+Gaming Content: Game reviews, esports coverage, industry analysis
+Content Strategy: SEO optimization, social media content
+Technical Writing: API docs, blockchain tutorials
+2. Portfolio/Featured Work
+Showcase your best pieces with:
+
+Case studies with results (engagement, conversions)
+Different content types (articles, guides, social posts)
+Client testimonials integrated with work samples
+Interactive preview cards
+3. Process/How I Work
+A 4-step process section:
+
+Discovery: Understanding your brand & audience
+Strategy: Content planning & keyword research
+Creation: Writing & optimization
+Delivery: Revisions & final delivery
+4. Testimonials/Social Proof
+Client reviews with:
+
+Photos and company logos
+Specific results achieved
+Different industries represented
+Star ratings or metrics
+5. Contact/CTA Section
+Strong call-to-action with:
+
+Contact form
+Pricing packages
+Calendar booking
+Social links

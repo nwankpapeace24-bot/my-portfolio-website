@@ -6,12 +6,13 @@ import {
   FiMenu,
   FiX,
   FiHome,
-  FiBookOpen,
   FiUser,
-  FiEdit3,
+  FiSettings,
+  FiBookOpen,
   FiMail,
   FiFeather,
 } from "react-icons/fi";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,10 +30,10 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", href: "#home", icon: FiHome },
+    { name: "Home", href: "#", icon: FiHome },
     { name: "About", href: "#about", icon: FiUser },
-    { name: "Books", href: "#books", icon: FiBookOpen },
-    { name: "Blog", href: "#blog", icon: FiEdit3 },
+    { name: "Services", href: "#services", icon: FiSettings },
+    { name: "Portfolio", href: "#portfolio", icon: FiBookOpen },
     { name: "Contact", href: "#contact", icon: FiMail },
   ];
 
@@ -103,9 +104,9 @@ const Navbar = () => {
               <h1 className="text-xl lg:text-2xl font-bold text-writer-deep-blue">
                 Peace Nwankpa
               </h1>
-              {/* <p className="text-xs accent-text text-writer-cornflower -mt-1 tracking-wide">
+              <p className="text-xs accent-text text-writer-cornflower -mt-1 tracking-wide">
                 iGaming • Crypto • Esports Writer
-              </p> */}
+              </p>
             </div>
           </motion.div>
 
@@ -137,16 +138,18 @@ const Navbar = () => {
           </div>
 
           {/* CTA Button - Right Side */}
-          <motion.button
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="hidden lg:block btn-primary z-10"
-          >
-            Hire Me
-          </motion.button>
+          <Link href="#contact">
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="hidden lg:block btn-primary z-10"
+            >
+              Hire Me
+            </motion.button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <motion.button
@@ -210,12 +213,14 @@ const Navbar = () => {
                   variants={mobileItemVariants}
                   className="pt-4 border-t border-writer-powder"
                 >
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="w-full btn-primary"
-                  >
-                    Hire Me
-                  </button>
+                  <Link href="#contact">
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="w-full btn-primary"
+                    >
+                      Hire Me
+                    </button>
+                  </Link>
                 </motion.div>
               </div>
             </motion.div>
