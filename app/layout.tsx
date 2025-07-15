@@ -45,7 +45,7 @@ const siteConfig = {
   title: "Peace Nwankpa - iGaming, Crypto & Esports Writer",
   description:
     "I craft high-impact content that simplifies blockchain, energizes gaming communities, and builds brand credibility. Expert writer specializing in iGaming, cryptocurrency, and esports content.",
-  url: "https://peacenwankpa.com", // Replace with your actual domain
+  url: "https://peacenwankpa.vercel.app", // Replace with your actual domain
   ogImage: "/img-5.jpg", // Social media image - Peace's photo
   favicon: "/logo.jpg", // Browser favicon/logo
   author: {
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   // Favicon and icons - Using logo.jpg
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/img-5.jpg", sizes: "any" },
       { url: "/logo.jpg", type: "image/jpeg" },
     ],
     apple: "/logo.jpg",
