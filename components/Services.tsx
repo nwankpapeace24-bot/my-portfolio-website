@@ -216,7 +216,7 @@ const Services = () => {
               Let's discuss how my expertise can help you create compelling
               content that drives results and builds your brand authority.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 w-full mx-auto items-center justify-center">
               <Link href="#contact">
                 <motion.button
                   whileHover={{ scale: 1.05 }}

@@ -402,7 +402,7 @@ const Portfolio = () => {
               Join these successful clients who transformed their content
               strategy and achieved measurable results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <Link href="#contact">
                 <motion.button
                   whileHover={{ scale: 1.02 }}

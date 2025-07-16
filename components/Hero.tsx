@@ -60,7 +60,7 @@ const Hero = () => {
 
   // Background decorations with delayed animation
   const backgroundDecorationVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       scale: 0.8,
     },
@@ -78,7 +78,7 @@ const Hero = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-writer-powder via-writer-lavender to-writer-cornflower relative overflow-hidden flex items-center">
       {/* Background decorative elements - Now with delayed animation */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0"
         variants={backgroundDecorationVariants}
         initial="hidden"
@@ -89,8 +89,8 @@ const Hero = () => {
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],
           }}
-          transition={{ 
-            duration: 8, 
+          transition={{
+            duration: 8,
             repeat: Infinity,
             delay: 2, // Additional delay for the animation loop
           }}
@@ -101,8 +101,8 @@ const Hero = () => {
             scale: [1.2, 1, 1.2],
             opacity: [0.05, 0.2, 0.05],
           }}
-          transition={{ 
-            duration: 10, 
+          transition={{
+            duration: 10,
             repeat: Infinity,
             delay: 2.2, // Staggered delay for natural appearance
           }}
@@ -113,8 +113,8 @@ const Hero = () => {
             scale: [1, 1.3, 1],
             opacity: [0.1, 0.25, 0.1],
           }}
-          transition={{ 
-            duration: 6, 
+          transition={{
+            duration: 6,
             repeat: Infinity,
             delay: 2.4, // Staggered delay for natural appearance
           }}
@@ -259,7 +259,7 @@ const Hero = () => {
       </div>
 
       {/* Wave Bottom Edge */}
-      <div className="absolute -bottom-6 left-0 w-full overflow-hidden leading-none">
+      <div className="absolute -bottom-4 lg:-bottom-6 left-0 w-full overflow-hidden leading-none">
         <svg
           className="relative block w-full h-[60px] sm:h-[80px] lg:h-[100px]"
           data-name="Layer 1"
