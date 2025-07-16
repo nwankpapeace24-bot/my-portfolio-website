@@ -63,7 +63,7 @@ const WhoIAm = () => {
       icon: FiEdit3,
       title: "Content Strategist",
       description:
-        "Crafting narratives that connect complex systems to audiences",
+        "Creating narratives that connect complex systems to audiences",
     },
   ];
 
