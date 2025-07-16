@@ -51,7 +51,8 @@ const WhoIAm = () => {
     {
       icon: FiMonitor,
       title: "iGaming Content Expert",
-      description: "From FPS titles to esports, I speak the language of gamers",
+      description:
+        "From high-roller guides to provably fair slots, I craft content that keeps players hooked",
     },
     {
       icon: FiTrendingUp,
@@ -177,30 +178,31 @@ const WhoIAm = () => {
             {/* Main Description */}
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg sm:text-xl text-writer-deep-blue leading-relaxed">
-                An{" "}
+                A{" "}
                 <span className="font-semibold text-writer-sky-blue">
-                  iGaming Content writer
+                  Crypto & iGaming Content Specialist
                 </span>{" "}
                 with a{" "}
                 <span className="font-semibold text-writer-sky-blue">
-                  gamer's spirit
+                  gambler's insight & a gamer's edge
                 </span>
-                . From NFTs to FPS titles, I bridge the gap between complex
-                systems and engaging narratives.
+                . From slot strategies to Bitcoin casinos, I turn complex trends
+                into compelling stories that drive action.
               </p>
 
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-                Whether it's content for exchanges or esports blogs, I write to{" "}
+                Whether crafting guides for crypto betting sites or reviews for
+                high-stakes poker platforms, I write to{" "}
                 <span className="font-semibold text-writer-deep-blue">
-                  connect
+                  engage
                 </span>
                 ,{" "}
                 <span className="font-semibold text-writer-deep-blue">
-                  convert
+                  educate
                 </span>
                 , and{" "}
                 <span className="font-semibold text-writer-deep-blue">
-                  captivate
+                  convert
                 </span>
                 .
               </p>
@@ -246,13 +248,14 @@ const WhoIAm = () => {
                   3+
                 </div>
                 <div className="text-xs sm:text-sm text-writer-cornflower font-medium">
-                  Years in Crypto
+                  Years in <span className="max-md:hidden">Crypto & </span>
+                  iGaming
                 </div>
               </div>
               <div className="w-px h-12 bg-writer-cornflower/30"></div>
               <div className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold text-writer-deep-blue">
-                  100+
+                  1K+
                 </div>
                 <div className="text-xs sm:text-sm text-writer-cornflower font-medium">
                   Gaming Articles

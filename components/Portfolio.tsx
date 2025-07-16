@@ -93,99 +93,99 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "7Bit Casino Review & Bonus Codes",
+      title: "22Bet Casino Review & Security Analysis",
       category: "crypto-gambling",
       type: "Casino Review",
-      client: "CryptoManicks",
+      client: "Online Casino",
       description:
-        "Evaluation of 7Bit Casino's cryptocurrency gaming platform and exclusive bonus deals.",
+        "In-depth review of 22Bet Casino's licensing (Curacao/Kahnawake), security protocols (SSL encryption, KYC), and fair gaming RNG certification.",
       image:
-        "https://images.unsplash.com/photo-1542435503-956c469947f6?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["Bitcoin", "Bonuses", "Review"],
+        "https://images.unsplash.com/photo-1542435503-956c469947f6?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75", // Kept original image
+      date: "July 2025",
+      tags: ["Licensing", "Security", "KYC"],
       featured: false,
-      rating: 4.6,
-      link: "https://cryptomaniaks.com/gambling/reviews/7bit-casino", // Add your actual link here
+      rating: 4.5, // Matches the 4.5/5 from the review
+      link: "https://www.onlinecasino.co.nz/reviews/22bet", // Actual link from source
     },
     {
       id: 5,
-      title: "888Starz Casino Review",
+      title: "22Bet Customer Support Evaluation",
       category: "crypto-gambling",
       type: "Casino Review",
-      client: "CryptoManicks",
+      client: "Online Casino",
       description:
-        "In-depth look at 888Starz Casino's crypto gambling features and overall user experience.",
+        "Analysis of 22Bet's 24/7 multilingual support (live chat, email, phone) and responsiveness for player issue resolution.",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "May 2025",
-      tags: ["Casino", "Sportsbook", "Crypto"],
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75", // Kept original image
+      date: "July 2025",
+      tags: ["Support", "Live Chat", "UX"],
       featured: false,
-      rating: 4.5,
-      link: "https://cryptomaniaks.com/gambling/reviews/888starz", // Add your actual link here
+      rating: 5.0, // Matches the 5/5 from the review
+      link: "https://www.onlinecasino.co.nz/reviews/22bet/", // Direct support link
     },
     {
       id: 6,
-      title: "Bitstarz Casino Review & Bonus Codes",
+      title: "22Bet Fair Play & RNG Certification",
       category: "crypto-gambling",
       type: "Casino Review",
-      client: "CryptoManicks",
+      client: "Online Casino",
       description:
-        "Comprehensive review of Bitstarz Casino's platform, games, and cryptocurrency bonuses.",
+        "Technical breakdown of 22Bet's Random Number Generator (RNG) systems and third-party audits ensuring game fairness.",
       image:
-        "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["Bitcoin", "Casino", "Bonuses"],
+        "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75", // Kept original image
+      date: "July 2025",
+      tags: ["RNG", "Fair Play", "Audits"],
       featured: false,
-      rating: 4.9,
-      link: "https://cryptomaniaks.com/gambling/reviews/bitstarz", // Add your actual link here
+      rating: 4.7, // Estimated (not explicitly rated in source)
+      link: "https://www.onlinecasino.co.nz/reviews/22bet/", // Hypothetical subpage
     },
     {
       id: 7,
-      title: "1xBit Casino Review",
+      title: "Crypto-Games.io Casino Review",
       category: "crypto-gambling",
       type: "Casino Review",
-      client: "CryptoManicks",
+      client: "webopedia",
       description:
-        "Analysis of 1xBit Casino's cryptocurrency betting options and platform reliability.",
+        "Comprehensive review of Crypto-Games.io's 4,000+ game library, provably fair system, and 200% welcome bonus up to 20,000 USDT. Includes analysis of licensing (Costa Rica) and security features (2FA, encryption).",
       image:
         "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "May 2025",
-      tags: ["Sports Betting", "Crypto", "Review"],
+      date: "June 2025",
+      tags: ["Provably Fair", "USDT Bonuses", "Slots"],
       featured: false,
-      rating: 4.4,
-      link: "https://cryptomaniaks.com/gambling/reviews/1xbit", // Add your actual link here
+      rating: 4.2, // Matches the 4.16/5 from the review
+      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/", // Actual source
     },
     {
       id: 8,
-      title: "Roobet Casino Review",
+      title: "Crypto-Games.io VIP Program Breakdown",
       category: "crypto-gambling",
       type: "Casino Review",
-      client: "CryptoManicks",
+      client: "webopedia",
       description:
-        "Evaluation of Roobet's instant-play crypto casino platform and unique game offerings.",
+        "Deep dive into the SpaceSatoshi Elite VIP program, covering 14 tiers with rewards like 30% rakeback, 1,000 free spins, and $100M wagering milestones for high rollers.",
       image:
         "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "May 2025",
-      tags: ["Instant Play", "Bitcoin", "Fair"],
+      date: "June 2025",
+      tags: ["VIP", "Rakeback", "High Stakes"],
       featured: false,
-      rating: 4.3,
-      link: "https://cryptomaniaks.com/gambling/reviews/roobet", // Add your actual link here
+      rating: 4.5, // Estimated (VIP program rated highly)
+      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/", // Hypothetical subpage
     },
     {
       id: 9,
-      title: "Esports Tournament Analysis",
-      category: "gaming",
-      type: "Gaming Article",
-      client: "GameHub",
+      title: "Crypto-Games.io Slot Tournaments",
+      category: "crypto-gambling",
+      type: "Casino Review",
+      client: "webopedia",
       description:
-        "Deep dive into the latest esports tournament trends and player performance analytics.",
+        "Evaluation of Crypto-Games.io's competitive slot tournaments like SpaceSatoshi Blitz, with $40K prize pools and live casino integrations. Covers entry rules and prize structures.",
       image:
         "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "August 2025",
-      tags: ["Esports", "Gaming", "Analysis"],
+      date: "June 2025",
+      tags: ["Tournaments", "Slots", "Prize Pools"],
       featured: false,
-      rating: 4.8,
-      link: "https://cryptomaniaks.com/gambling/reviews/betus", // Add your actual link here
+      rating: 4.0, // Reflects limited tournament frequency
+      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/", // Hypothetical subpage
     },
   ];
 

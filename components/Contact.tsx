@@ -190,7 +190,7 @@ const Contact = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-lg font-bold text-writer-deep-blue">
-                    100+
+                    1K+
                   </div>
                   <div className="text-xs text-writer-cornflower">
                     Projects Done

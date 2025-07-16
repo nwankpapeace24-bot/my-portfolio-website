@@ -149,7 +149,7 @@ const Hero = () => {
                 className="mono-text text-xs sm:text-sm text-writer-cornflower opacity-80"
                 variants={itemVariants}
               >
-                ✍️ Writer | Crypto Analyst | Gaming Aficionado
+                ✍️ Writer | Gaming Aficionado | Crypto Analyst
               </motion.div>
             </motion.div>
 
@@ -157,10 +157,11 @@ const Hero = () => {
               variants={itemVariants}
               className="text-base sm:text-lg font-body text-writer-deep-blue leading-relaxed max-w-2xl mx-auto lg:mx-0"
             >
-              I craft high-impact content that simplifies blockchain, energizes
-              gaming communities, and builds brand credibility. With a passion
-              for immersive storytelling and sharp industry insight, I deliver
-              results that engage, educate, and convert.
+              I craft high-impact iGaming content that electrifies casino
+              communities, demystifies crypto betting, and boosts operator
+              trust. With a gambler's intuition and a marketer's precision, I
+              turn complex trends into engaging stories that drive deposits,
+              clicks, and loyalty.
             </motion.p>
 
             <motion.div
