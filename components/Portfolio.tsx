@@ -57,10 +57,25 @@ const Portfolio = () => {
       tags: ["Casino", "Crypto", "Review"],
       featured: true,
       rating: 5.0,
-      link: "https://cryptomaniaks.com/gambling/reviews/bao-casino", // Add your actual link here
+      link: "https://cryptomaniaks.com/gambling/reviews/bao-casino",
     },
     {
       id: 2,
+      title: "FaZe Clan Appoints NEO as CS:GO Coach",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
+      description:
+        "FaZe Clan's strategic hiring of legendary player Filip 'NEO' Kubski as head coach ahead of major tournaments.",
+      image: "/faze.jpg",
+      date: "July 2023",
+      tags: ["CS:GO", "FaZe Clan", "Coaching"],
+      featured: false,
+      rating: 4.5,
+      link: "https://esportbet.com/author/peace-nwankpa/",
+    },
+    {
+      id: 3,
       title: "BBC Casino Review 2025",
       category: "crypto-gambling",
       type: "Casino Review",
@@ -73,119 +88,191 @@ const Portfolio = () => {
       tags: ["Casino", "Bitcoin", "Review"],
       featured: true,
       rating: 4.8,
-      link: "https://cryptomaniaks.com/gambling/reviews/betchain", // Add your actual link here
-    },
-    {
-      id: 3,
-      title: "22Bet Casino Review & Bonus Codes",
-      category: "crypto-gambling",
-      type: "Casino Review",
-      client: "CryptoManicks",
-      description:
-        "Detailed analysis of 22Bet Casino's 2025 bonus offerings and crypto payment options.",
-      image:
-        "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["Sportsbook", "Bonus", "Crypto"],
-      featured: false,
-      rating: 4.7,
-      link: "https://cryptomaniaks.com/gambling/reviews/22bet", // Add your actual link here
+      link: "https://cryptomaniaks.com/gambling/reviews/betchain",
     },
     {
       id: 4,
-      title: "22Bet Casino Review & Security Analysis",
-      category: "crypto-gambling",
-      type: "Casino Review",
-      client: "Online Casino",
+      title: "M80 Signs All-American CS:GO Roster",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
       description:
-        "In-depth review of 22Bet Casino's licensing (Curacao/Kahnawake), security protocols (SSL encryption, KYC), and fair gaming RNG certification.",
-      image:
-        "https://images.unsplash.com/photo-1542435503-956c469947f6?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75", // Kept original image
-      date: "July 2025",
-      tags: ["Licensing", "Security", "KYC"],
+        "Announcement of M80's debut in competitive CS:GO with an all-American lineup.",
+      image: "/m80.png",
+      date: "July 2023",
+      tags: ["CS:GO", "M80", "NA Esports"],
       featured: false,
-      rating: 4.5, // Matches the 4.5/5 from the review
-      link: "https://www.onlinecasino.co.nz/reviews/22bet", // Actual link from source
+      rating: 4.2,
+      link: "https://esportbet.com/author/peace-nwankpa/",
     },
     {
       id: 5,
-      title: "22Bet Customer Support Evaluation",
+      title: "1xBit Casino & Sportsbook Review",
       category: "crypto-gambling",
-      type: "Casino Review",
-      client: "Online Casino",
+      type: "Webopedia Review",
+      client: "Webopedia",
       description:
-        "Analysis of 22Bet's 24/7 multilingual support (live chat, email, phone) and responsiveness for player issue resolution.",
+        "Analysis of 1xBit's crypto betting platform with 7 BTC welcome bonuses and 250 free spins.",
       image:
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75", // Kept original image
-      date: "July 2025",
-      tags: ["Support", "Live Chat", "UX"],
+        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
+      date: "April 2025",
+      tags: ["Sports Betting", "Anonymous Play", "BTC Bonus"],
       featured: false,
-      rating: 5.0, // Matches the 5/5 from the review
-      link: "https://www.onlinecasino.co.nz/reviews/22bet/", // Direct support link
+      rating: 4.6,
+      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/",
     },
     {
       id: 6,
-      title: "22Bet Fair Play & RNG Certification",
-      category: "crypto-gambling",
-      type: "Casino Review",
-      client: "Online Casino",
+      title: "OG Bench Taiga Ahead of TI12 Qualifiers",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
       description:
-        "Technical breakdown of 22Bet's Random Number Generator (RNG) systems and third-party audits ensuring game fairness.",
-      image:
-        "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75", // Kept original image
-      date: "July 2025",
-      tags: ["RNG", "Fair Play", "Audits"],
+        "OG's decision to bench Tommy 'Taiga' Le before The International 12 qualifiers.",
+      image: "/dota.jpg",
+      date: "August 2023",
+      tags: ["Dota 2", "OG", "Roster Changes"],
       featured: false,
-      rating: 4.7, // Estimated (not explicitly rated in source)
-      link: "https://www.onlinecasino.co.nz/reviews/22bet/", // Hypothetical subpage
+      rating: 4.3,
+      link: "https://esportbet.com/author/peace-nwankpa/",
     },
     {
       id: 7,
-      title: "Crypto-Games.io Casino Review",
+      title: "22Bet NZ Casino Review 2025",
       category: "crypto-gambling",
       type: "Casino Review",
-      client: "webopedia",
+      client: "Casino",
       description:
-        "Comprehensive review of Crypto-Games.io's 4,000+ game library, provably fair system, and 200% welcome bonus up to 20,000 USDT. Includes analysis of licensing (Costa Rica) and security features (2FA, encryption).",
+        "Analysis of 22Bet NZ's high RTP (96.46%), fast payouts, and tailored NZ bonuses.",
       image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["Provably Fair", "USDT Bonuses", "Slots"],
+        "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
+      date: "July 2025",
+      tags: ["High RTP", "Low Stakes", "NZ Market"],
       featured: false,
-      rating: 4.2, // Matches the 4.16/5 from the review
-      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/", // Actual source
+      rating: 4.5,
+      link: "https://www.onlinecasino.co.nz/reviews/22bet/",
     },
     {
       id: 8,
-      title: "Crypto-Games.io VIP Program Breakdown",
-      category: "crypto-gambling",
-      type: "Casino Review",
-      client: "webopedia",
+      title: "Cloud9 Signs electroNic & Perfecto",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
       description:
-        "Deep dive into the SpaceSatoshi Elite VIP program, covering 14 tiers with rewards like 30% rakeback, 1,000 free spins, and $100M wagering milestones for high rollers.",
-      image:
-        "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["VIP", "Rakeback", "High Stakes"],
+        "Cloud9's major CS:GO roster overhaul with star players electroNic and Perfecto.",
+      image: "/c9.jpg",
+      date: "July 2023",
+      tags: ["CS:GO", "Cloud9", "Star Signings"],
       featured: false,
-      rating: 4.5, // Estimated (VIP program rated highly)
-      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/", // Hypothetical subpage
+      rating: 4.5,
+      link: "https://esportbet.com/author/peace-nwankpa/",
     },
     {
       id: 9,
-      title: "Crypto-Games.io Slot Tournaments",
+      title: "Best Crypto & Bitcoin Jackpot Sites (2025)",
       category: "crypto-gambling",
-      type: "Casino Review",
-      client: "webopedia",
+      type: "Industry Guide",
+      client: "Crypto2Community",
       description:
-        "Evaluation of Crypto-Games.io's competitive slot tournaments like SpaceSatoshi Blitz, with $40K prize pools and live casino integrations. Covers entry rules and prize structures.",
+        "Guide to top crypto jackpot platforms like METAWIN ($700K prizes) and C.bet (130% BTC bonuses).",
       image:
-        "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
+        "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
       date: "June 2025",
-      tags: ["Tournaments", "Slots", "Prize Pools"],
+      tags: ["Jackpots", "BTC Bonuses", "High Payouts"],
       featured: false,
-      rating: 4.0, // Reflects limited tournament frequency
-      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/", // Hypothetical subpage
+      rating: 4.5,
+      link: "https://crypto2community.com/crypto-gambling/crypto-and-bitcoin-jackpot-sites/",
+    },
+    {
+      id: 10,
+      title: "Preasy Adds Refrezh to CS:GO Lineup",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
+      description:
+        "Preasy Esport's acquisition of Ismail 'refrezh' Ali for their CS:GO team.",
+      image: "/csgo-char.jpg.jpg",
+      date: "August 2023",
+      tags: ["CS:GO", "Player Transfer", "Preasy"],
+      featured: false,
+      rating: 4.2,
+      link: "https://esportbet.com/author/peace-nwankpa/",
+    },
+    {
+      id: 11,
+      title: "Crypto-Games.io Casino Review",
+      category: "crypto-gambling",
+      type: "Webopedia Review",
+      client: "Webopedia",
+      description:
+        "Review of Crypto-Games.io's 4,000+ game library and 200% USDT welcome bonus.",
+      image:
+        "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
+      date: "June 2025",
+      tags: ["USDT Bonus", "VIP Program", "Live Casino"],
+      featured: false,
+      rating: 4.2,
+      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/",
+    },
+    {
+      id: 12,
+      title: "HisWattson Retires from Apex Legends",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
+      description:
+        "Jacob 'HisWattson' McMillin's retirement from FURIA's Apex Legends roster.",
+      image: "/Jacob.jpg",
+      date: "July 2023",
+      tags: ["Apex Legends", "Retirement", "FURIA"],
+      featured: false,
+      rating: 4.1,
+      link: "https://esportbet.com/author/peace-nwankpa/",
+    },
+    {
+      id: 13,
+      title: "Sashi Signs New Counter-Strike Players",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
+      description:
+        "Sashi Esports' roster expansion with three new CS:GO players.",
+      image: "/sashi.jpeg",
+      date: "August 2023",
+      tags: ["CS:GO", "Roster Changes", "Sashi"],
+      featured: false,
+      rating: 4.0,
+      link: "https://esportbet.com/author/peace-nwankpa/",
+    },
+    {
+      id: 14,
+      title: "Overwatch League 2023 Grand Finals in Toronto",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
+      description:
+        "Overwatch League playoffs and Grand Finals location announcement for Toronto.",
+      image: "/overwatch.jpg",
+      date: "July 2023",
+      tags: ["Overwatch", "Grand Finals", "Toronto"],
+      featured: false,
+      rating: 4.4,
+      link: "https://esportbet.com/author/peace-nwankpa/",
+    },
+    {
+      id: 15,
+      title: "xseveN Retires from Competitive CS:GO",
+      category: "esports",
+      type: "News Article",
+      client: "Esports",
+      description:
+        "Sami 'xseveN' Laasanen's retirement from HAVU's CS:GO team after 7 years.",
+      image: "/Sami.jpeg",
+      date: "July 2023",
+      tags: ["CS:GO", "Retirement", "HAVU"],
+      featured: false,
+      rating: 4.0,
+      link: "https://esportbet.com/author/peace-nwankpa/",
     },
   ];
 
