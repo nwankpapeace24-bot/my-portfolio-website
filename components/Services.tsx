@@ -45,7 +45,7 @@ const Services = () => {
       icon: FiMonitor,
       title: "iGaming Content",
       description:
-        "I create high quality content ranging from casino and sportsbook reviews to how to guides that keep players engaged.",
+        "High quality content ranging from casino and sportsbook reviews, to how-to guides, news articles and slot reviews to keep players engaged and informed.",
       image: "/gaming-content.jpg",
       color: "from-purple-400 to-pink-500",
     },
@@ -126,9 +126,9 @@ const Services = () => {
           </h2>
 
           <p className="text-lg lg:text-xl font-body text-writer-deep-blue leading-relaxed max-w-3xl mx-auto opacity-90">
-            I specialize in creating high-impact content across the most dynamic
-            industries. From blockchain innovation to gaming culture, I deliver
-            content that educates, engages, and converts.
+            I specialize in creating impactful content for fast-moving
+            industries, from blockchain to gaming—driving engagement, education,
+            and conversion.
           </p>
         </motion.div>
 

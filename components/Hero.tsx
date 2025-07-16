@@ -238,7 +238,7 @@ const Hero = () => {
                     Peace Nwankpa
                   </h3>
                   <p className="text-xs sm:text-sm accent-text text-writer-cornflower mt-1">
-                    Expert Content Creator
+                    Expert Content Writer
                   </p>
                 </div>
               </motion.div>

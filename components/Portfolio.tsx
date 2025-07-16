@@ -99,7 +99,7 @@ const Portfolio = () => {
       id: 4,
       title: "1xBit Casino Review",
       category: "crypto-gambling",
-      type: "Webopedia Review",
+      type: "Casino Review",
       client: "Webopedia",
       description:
         "Analysis of 1xBit's 7 BTC welcome bonus and anonymous betting.",

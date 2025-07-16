@@ -46,7 +46,7 @@ const siteConfig = {
   description:
     "I craft high-impact iGaming content that electrifies casino communities, demystifies crypto betting, and boosts operator trust. With a gambler's intuition and a marketer's precision, I turn complex trends into engaging stories that drive deposits, clicks, and loyalty.",
   url: "https://peacenwankpa.vercel.app", // Replace with your actual domain
-  ogImage: "/img-5.jpg", // Social media image - Peace's photo
+  ogImage: "/img-4.jpg", // Social media image - Peace's photo
   favicon: "/logo.jpg", // Browser favicon/logo
   author: {
     name: "Peace Nwankpa",
@@ -89,14 +89,14 @@ export const metadata: Metadata = {
   // Favicon and icons - Using logo.jpg
   icons: {
     icon: [
-      { url: "/img-5.jpg", sizes: "any" },
+      { url: "/img-4.jpg", sizes: "any" },
       { url: "/logo.jpg", type: "image/jpeg" },
     ],
     apple: "/logo.jpg",
     shortcut: "/logo.jpg",
   },
 
-  // Open Graph (Facebook, LinkedIn, etc.) - Using img-5.jpg
+  // Open Graph (Facebook, LinkedIn, etc.) - Using img-4.jpg
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -106,14 +106,14 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: siteConfig.ogImage, // This is /img-5.jpg
+        url: siteConfig.ogImage, // This is /img-4.jpg
         width: 1200,
         height: 630,
         alt: `${siteConfig.author.name} - Professional Writer`,
         type: "image/jpeg",
       },
       {
-        url: "/img-5.jpg", // Square version fallback
+        url: "/img-4.jpg", // Square version fallback
         width: 800,
         height: 800,
         alt: `${siteConfig.author.name} - Professional Writer`,
@@ -122,7 +122,7 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Twitter Card - Using img-5.jpg
+  // Twitter Card - Using img-4.jpg
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
@@ -131,7 +131,7 @@ export const metadata: Metadata = {
     site: siteConfig.author.twitter,
     images: [
       {
-        url: siteConfig.ogImage, // This is /img-5.jpg
+        url: siteConfig.ogImage, // This is /img-4.jpg
         alt: `${siteConfig.author.name} - Professional Writer`,
       },
     ],
@@ -197,7 +197,7 @@ export default function RootLayout({
               "@type": "Person",
               name: siteConfig.author.name,
               url: siteConfig.url,
-              image: siteConfig.ogImage, // Using img-5.jpg for structured data
+              image: siteConfig.ogImage, // Using img-4.jpg for structured data
               description: siteConfig.description,
               jobTitle: "iGaming, Crypto & Esports Writer",
               worksFor: {

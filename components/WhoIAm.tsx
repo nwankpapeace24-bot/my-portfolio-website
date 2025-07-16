@@ -52,18 +52,19 @@ const WhoIAm = () => {
       icon: FiMonitor,
       title: "iGaming Content Expert",
       description:
-        "From high-roller guides to provably fair slots, I create contents that keeps players hooked",
+        "Supplies helpful, and insightful iGaming reviews and guides to keep players informed and engaged.",
     },
     {
       icon: FiTrendingUp,
       title: "Crypto Native",
-      description: "Deep understanding of blockchain, DeFi, and digital assets",
+      description:
+        "Churns out well-researched cryptocurrency news backed by a deep understanding of blockchain, DeFi and digital assets.",
     },
     {
       icon: FiEdit3,
       title: "Content Strategist",
       description:
-        "Creating narratives that connect complex systems to audiences",
+        "Creates narratives that connects complex systems to audiences across different experience levels.",
     },
   ];
 
@@ -186,8 +187,9 @@ const WhoIAm = () => {
                 <span className="font-semibold text-writer-sky-blue">
                   gambler's insight & a gamer's edge
                 </span>
-                . From slot strategies to Bitcoin casinos, I turn complex trends
-                into compelling stories that drive action.
+                . From slot strategies to Bitcoin casinos, From slot strategies
+                to Bitcoin casinos, I study ever-changing trends and spin
+                compelling stories that drive action.
               </p>
 
               <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
