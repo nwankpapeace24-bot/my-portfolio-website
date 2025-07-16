@@ -50,8 +50,8 @@ const siteConfig = {
   favicon: "/logo.jpg", // Browser favicon/logo
   author: {
     name: "Peace Nwankpa",
-    twitter: "@peacenwankpa", // Replace with actual Twitter handle
-    linkedin: "peacenwankpa", // Replace with actual LinkedIn username
+    twitter: "@lulu246777", // Replace with actual Twitter handle
+    linkedin: "Peace (Ugonma) Nwankpa", // Replace with actual LinkedIn username
   },
   keywords: [
     "iGaming writer",

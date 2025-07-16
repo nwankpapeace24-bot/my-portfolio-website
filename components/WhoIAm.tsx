@@ -49,14 +49,14 @@ const WhoIAm = () => {
 
   const features = [
     {
+      icon: FiMonitor,
+      title: "iGaming Content Expert",
+      description: "From FPS titles to esports, I speak the language of gamers",
+    },
+    {
       icon: FiTrendingUp,
       title: "Crypto Native",
       description: "Deep understanding of blockchain, DeFi, and digital assets",
-    },
-    {
-      icon: FiMonitor,
-      title: "Gaming Expert",
-      description: "From FPS titles to esports, I speak the language of gamers",
     },
     {
       icon: FiEdit3,
@@ -114,9 +114,9 @@ const WhoIAm = () => {
                     className="absolute top-4 sm:top-6 left-4 sm:left-6 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-lg"
                   >
                     <div className="flex items-center space-x-2">
-                      <FiTrendingUp className="w-4 h-4 text-writer-sky-blue" />
+                      <FiMonitor className="w-4 h-4 text-writer-sky-blue" />
                       <span className="text-xs font-medium text-writer-deep-blue">
-                        Crypto Expert
+                        iGaming Expert
                       </span>
                     </div>
                   </motion.div>
@@ -129,9 +129,9 @@ const WhoIAm = () => {
                     className="absolute bottom-4 sm:bottom-6 right-4 sm:right-6 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-full shadow-lg"
                   >
                     <div className="flex items-center space-x-2">
-                      <FiMonitor className="w-4 h-4 text-writer-sky-blue" />
+                      <FiTrendingUp className="w-4 h-4 text-writer-sky-blue" />
                       <span className="text-xs font-medium text-writer-deep-blue">
-                        Gaming Native
+                        Crypto Native
                       </span>
                     </div>
                   </motion.div>
@@ -177,9 +177,9 @@ const WhoIAm = () => {
             {/* Main Description */}
             <motion.div variants={itemVariants} className="space-y-6">
               <p className="text-lg sm:text-xl text-writer-deep-blue leading-relaxed">
-                A{" "}
+                An{" "}
                 <span className="font-semibold text-writer-sky-blue">
-                  crypto-native writer
+                  iGaming Content writer
                 </span>{" "}
                 with a{" "}
                 <span className="font-semibold text-writer-sky-blue">

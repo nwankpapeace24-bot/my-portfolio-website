@@ -42,14 +42,6 @@ const Services = () => {
 
   const services = [
     {
-      icon: FiDollarSign,
-      title: "Crypto Content",
-      description:
-        "Expert blockchain and cryptocurrency content that demystifies complex concepts for your audience.",
-      image: "/image-2.jpg", // You'll need to add these images
-      color: "from-yellow-400 to-orange-500",
-    },
-    {
       icon: FiMonitor,
       title: "Gaming Content",
       description:
@@ -57,6 +49,15 @@ const Services = () => {
       image: "/gaming-content.jpg",
       color: "from-purple-400 to-pink-500",
     },
+    {
+      icon: FiDollarSign,
+      title: "Crypto Content",
+      description:
+        "Expert blockchain and cryptocurrency content that demystifies complex concepts for your audience.",
+      image: "/image-2.jpg", // You'll need to add these images
+      color: "from-yellow-400 to-orange-500",
+    },
+
     {
       icon: FiTrendingUp,
       title: "Content Strategy",
