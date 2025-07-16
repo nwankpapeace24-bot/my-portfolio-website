@@ -43,6 +43,7 @@ const Portfolio = () => {
   };
 
   const portfolioItems = [
+    // Featured Casino Reviews (kept as highlights)
     {
       id: 1,
       title: "Bao Casino Review",
@@ -50,76 +51,81 @@ const Portfolio = () => {
       type: "Casino Review",
       client: "CryptoManicks",
       description:
-        "Comprehensive review of Bao Casino's crypto gambling features, bonuses, and user experience.",
+        "Comprehensive review of Bao Casino's crypto gambling features and bonuses.",
       image:
         "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
       date: "July 2025",
-      tags: ["Casino", "Crypto", "Review"],
+      tags: ["Featured", "Crypto", "5★ Rating"],
       featured: true,
       rating: 5.0,
-      link: "https://cryptomaniaks.com/gambling/reviews/bao-casino",
+      link: "https://cryptomaniaks.com/reviews/bao-casino",
     },
     {
       id: 2,
-      title: "FaZe Clan Appoints NEO as CS:GO Coach",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "FaZe Clan's strategic hiring of legendary player Filip 'NEO' Kubski as head coach ahead of major tournaments.",
-      image: "/faze.jpg",
-      date: "July 2023",
-      tags: ["CS:GO", "FaZe Clan", "Coaching"],
-      featured: false,
-      rating: 4.5,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 3,
       title: "BBC Casino Review 2025",
       category: "crypto-gambling",
       type: "Casino Review",
       client: "CryptoManicks",
       description:
-        "Updated 2025 review of BBC Casino's cryptocurrency betting options and platform features.",
+        "Updated 2025 review of BBC Casino's Bitcoin betting platform.",
       image:
         "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
       date: "June 2025",
-      tags: ["Casino", "Bitcoin", "Review"],
+      tags: ["Featured", "Bitcoin", "4.8★"],
       featured: true,
       rating: 4.8,
-      link: "https://cryptomaniaks.com/gambling/reviews/betchain",
+      link: "https://cryptomaniaks.com/reviews/betchain",
     },
+
+    // Consolidated Esports Card
     {
-      id: 4,
-      title: "M80 Signs All-American CS:GO Roster",
+      id: 3,
+      title: "Esports News Hub",
       category: "esports",
-      type: "News Article",
+      type: "News Portal",
       client: "Esports",
       description:
-        "Announcement of M80's debut in competitive CS:GO with an all-American lineup.",
-      image: "/m80.png",
-      date: "July 2023",
-      tags: ["CS:GO", "M80", "NA Esports"],
-      featured: false,
-      rating: 4.2,
-      link: "https://esportbet.com/author/peace-nwankpa/",
+        "Your gateway to CS:GO roster changes, player retirements, and tournament coverage. Explore 50+ articles on esports betting insights.",
+      image: "/Sami.jpeg", // Use a collage image of multiple games
+      date: "2023-2025",
+      tags: ["CS:GO", "Dota 2", "Apex Legends", "Overwatch"],
+      featured: true,
+      rating: 4.5,
+      link: "https://esportbet.com/author/peace-nwankpa/", // Main esports portal
     },
+
+    // Other Casino/Gambling Highlights
     {
-      id: 5,
-      title: "1xBit Casino & Sportsbook Review",
+      id: 4,
+      title: "1xBit Casino Review",
       category: "crypto-gambling",
       type: "Webopedia Review",
       client: "Webopedia",
       description:
-        "Analysis of 1xBit's crypto betting platform with 7 BTC welcome bonuses and 250 free spins.",
+        "Analysis of 1xBit's 7 BTC welcome bonus and anonymous betting.",
       image:
         "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
       date: "April 2025",
-      tags: ["Sports Betting", "Anonymous Play", "BTC Bonus"],
+      tags: ["Sports Betting", "Anonymous Play"],
       featured: false,
       rating: 4.6,
-      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/",
+      link: "https://webopedia.com/reviews/1xbit",
+    },
+    {
+      id: 5,
+      title: "Best Crypto Jackpot Sites (2025)",
+      category: "crypto-gambling",
+      type: "Industry Guide",
+      client: "Crypto2Community",
+      description:
+        "Curated guide to platforms like METAWIN ($700K prizes) and C.bet (130% BTC bonus).",
+      image:
+        "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
+      date: "June 2025",
+      tags: ["Jackpots", "High Payouts"],
+      featured: false,
+      rating: 4.5,
+      link: "https://crypto2community.com/jackpot-sites",
     },
     {
       id: 6,
@@ -134,144 +140,6 @@ const Portfolio = () => {
       tags: ["Dota 2", "OG", "Roster Changes"],
       featured: false,
       rating: 4.3,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 7,
-      title: "22Bet NZ Casino Review 2025",
-      category: "crypto-gambling",
-      type: "Casino Review",
-      client: "Casino",
-      description:
-        "Analysis of 22Bet NZ's high RTP (96.46%), fast payouts, and tailored NZ bonuses.",
-      image:
-        "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "July 2025",
-      tags: ["High RTP", "Low Stakes", "NZ Market"],
-      featured: false,
-      rating: 4.5,
-      link: "https://www.onlinecasino.co.nz/reviews/22bet/",
-    },
-    {
-      id: 8,
-      title: "Cloud9 Signs electroNic & Perfecto",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "Cloud9's major CS:GO roster overhaul with star players electroNic and Perfecto.",
-      image: "/c9.jpg",
-      date: "July 2023",
-      tags: ["CS:GO", "Cloud9", "Star Signings"],
-      featured: false,
-      rating: 4.5,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 9,
-      title: "Best Crypto & Bitcoin Jackpot Sites (2025)",
-      category: "crypto-gambling",
-      type: "Industry Guide",
-      client: "Crypto2Community",
-      description:
-        "Guide to top crypto jackpot platforms like METAWIN ($700K prizes) and C.bet (130% BTC bonuses).",
-      image:
-        "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["Jackpots", "BTC Bonuses", "High Payouts"],
-      featured: false,
-      rating: 4.5,
-      link: "https://crypto2community.com/crypto-gambling/crypto-and-bitcoin-jackpot-sites/",
-    },
-    {
-      id: 10,
-      title: "Preasy Adds Refrezh to CS:GO Lineup",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "Preasy Esport's acquisition of Ismail 'refrezh' Ali for their CS:GO team.",
-      image: "/csgo-char.jpg.jpg",
-      date: "August 2023",
-      tags: ["CS:GO", "Player Transfer", "Preasy"],
-      featured: false,
-      rating: 4.2,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 11,
-      title: "Crypto-Games.io Casino Review",
-      category: "crypto-gambling",
-      type: "Webopedia Review",
-      client: "Webopedia",
-      description:
-        "Review of Crypto-Games.io's 4,000+ game library and 200% USDT welcome bonus.",
-      image:
-        "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=400&h=300&fit=crop&crop=entropy&auto=format&q=75",
-      date: "June 2025",
-      tags: ["USDT Bonus", "VIP Program", "Live Casino"],
-      featured: false,
-      rating: 4.2,
-      link: "https://www.webopedia.com/crypto/gambling/reviews/crypto-games-io-casino/",
-    },
-    {
-      id: 12,
-      title: "HisWattson Retires from Apex Legends",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "Jacob 'HisWattson' McMillin's retirement from FURIA's Apex Legends roster.",
-      image: "/Jacob.jpg",
-      date: "July 2023",
-      tags: ["Apex Legends", "Retirement", "FURIA"],
-      featured: false,
-      rating: 4.1,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 13,
-      title: "Sashi Signs New Counter-Strike Players",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "Sashi Esports' roster expansion with three new CS:GO players.",
-      image: "/sashi.jpeg",
-      date: "August 2023",
-      tags: ["CS:GO", "Roster Changes", "Sashi"],
-      featured: false,
-      rating: 4.0,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 14,
-      title: "Overwatch League 2023 Grand Finals in Toronto",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "Overwatch League playoffs and Grand Finals location announcement for Toronto.",
-      image: "/overwatch.jpg",
-      date: "July 2023",
-      tags: ["Overwatch", "Grand Finals", "Toronto"],
-      featured: false,
-      rating: 4.4,
-      link: "https://esportbet.com/author/peace-nwankpa/",
-    },
-    {
-      id: 15,
-      title: "xseveN Retires from Competitive CS:GO",
-      category: "esports",
-      type: "News Article",
-      client: "Esports",
-      description:
-        "Sami 'xseveN' Laasanen's retirement from HAVU's CS:GO team after 7 years.",
-      image: "/Sami.jpeg",
-      date: "July 2023",
-      tags: ["CS:GO", "Retirement", "HAVU"],
-      featured: false,
-      rating: 4.0,
       link: "https://esportbet.com/author/peace-nwankpa/",
     },
   ];
@@ -318,8 +186,8 @@ const Portfolio = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-writer-deep-blue leading-relaxed max-w-2xl mx-auto opacity-90">
-            Explore my recent work and the measurable results achieved for
-            clients across crypto, gaming, and tech industries.
+            Explore some of my recent work and the measurable results achieved
+            for clients across crypto, gaming, and tech industries.
           </p>
         </motion.div>
 

@@ -42,9 +42,9 @@ const jetbrainsMono = JetBrains_Mono({
 // SEO Configuration
 const siteConfig = {
   name: "Peace Nwankpa",
-  title: "Peace Nwankpa - iGaming, Crypto & Esports Writer",
+  title: "Peace Nwankpa — iGaming, Crypto & Esports Writer",
   description:
-    "I craft high-impact content that simplifies blockchain, energizes gaming communities, and builds brand credibility. Expert writer specializing in iGaming, cryptocurrency, and esports content.",
+    "I craft high-impact iGaming content that electrifies casino communities, demystifies crypto betting, and boosts operator trust. With a gambler's intuition and a marketer's precision, I turn complex trends into engaging stories that drive deposits, clicks, and loyalty.",
   url: "https://peacenwankpa.vercel.app", // Replace with your actual domain
   ogImage: "/img-5.jpg", // Social media image - Peace's photo
   favicon: "/logo.jpg", // Browser favicon/logo

@@ -52,7 +52,7 @@ const WhoIAm = () => {
       icon: FiMonitor,
       title: "iGaming Content Expert",
       description:
-        "From high-roller guides to provably fair slots, I craft content that keeps players hooked",
+        "From high-roller guides to provably fair slots, I create contents that keeps players hooked",
     },
     {
       icon: FiTrendingUp,

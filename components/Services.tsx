@@ -43,9 +43,9 @@ const Services = () => {
   const services = [
     {
       icon: FiMonitor,
-      title: "Gaming Content",
+      title: "iGaming Content",
       description:
-        "Engaging gaming content that connects with communities and drives meaningful engagement.",
+        "I create high quality content ranging from casino and sportsbook reviews to how to guides that keep players engaged.",
       image: "/gaming-content.jpg",
       color: "from-purple-400 to-pink-500",
     },
