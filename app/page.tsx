@@ -3,6 +3,8 @@ import Portfolio from "@/components/Portfolio";
 import Services from "@/components/Services";
 import WhoIAm from "@/components/WhoIAm";
 import Contact from "@/components/Contact";
+import Testimonials from "@/components/Testimonials";
+import Brands from "@/components/Brands";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
       <WhoIAm />
       <Services />
       <Portfolio />
+      <Testimonials />
+      <Brands />
       <Contact />
     </main>
   );

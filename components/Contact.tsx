@@ -62,7 +62,7 @@ const Contact = () => {
     {
       icon: FaWhatsapp,
       label: "WhatsApp",
-      value: "+234 814 802 5837",
+      value: "",
       href: "https://wa.me/2348148025837",
       color: "from-green-500 to-green-600",
       description: "Quick chat or consultation",
