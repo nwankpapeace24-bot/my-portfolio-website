@@ -60,11 +60,11 @@ const Contact = () => {
       description: "Drop me a line anytime",
     },
     {
-      icon: FaWhatsapp,
-      label: "WhatsApp",
+      icon: FiLinkedin,
+      label: "Linkedin",
       value: "",
-      href: "https://wa.me/2348148025837",
-      color: "from-green-500 to-green-600",
+      href: "https://www.linkedin.com/in/peace-nwankpa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      color: "from-blue-700 to-blue-900",
       description: "Quick chat or consultation",
     },
   ];
