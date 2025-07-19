@@ -194,7 +194,7 @@ const Brands = () => {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
                 <motion.div whileHover={{ scale: 1.05 }} className="space-y-2">
                   <div className="text-3xl sm:text-4xl font-heading font-bold">
-                    13+
+                    20+
                   </div>
                   <div className="text-sm sm:text-base opacity-90">
                     Brands Served
