@@ -53,7 +53,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      name: "Sourcing Specialist",
+      name: "iGaming Sourcing Specialist",
       role: "Marketing Director",
       company: "Esportbet",
       testimonial:
