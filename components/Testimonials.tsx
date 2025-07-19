@@ -133,11 +133,11 @@ const Testimonials = () => {
               <span className="text-gradient">My Work</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-writer-deep-blue leading-relaxed max-w-2xl mx-auto opacity-90 mb-4">
+            {/* <p className="text-base sm:text-lg text-writer-deep-blue leading-relaxed max-w-2xl mx-auto opacity-90 mb-4">
               Trusted by leading iGaming, crypto, and esports brands to deliver
               content that drives engagement, builds authority, and converts
               readers into customers.
-            </p>
+            </p> */}
 
             {/* Small selection indicator */}
             <motion.div

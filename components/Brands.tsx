@@ -76,11 +76,11 @@ const Brands = () => {
               Brands That <span className="text-gradient">Trust My Work</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-writer-deep-blue leading-relaxed max-w-2xl mx-auto opacity-90">
+            {/* <p className="text-base sm:text-lg text-writer-deep-blue leading-relaxed max-w-2xl mx-auto opacity-90">
               Collaborating with industry leaders across iGaming, crypto, and
               esports to deliver content that drives results and builds lasting
               partnerships.
-            </p>
+            </p> */}
           </motion.div>
         </div>
 
