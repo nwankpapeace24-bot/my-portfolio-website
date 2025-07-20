@@ -41,7 +41,7 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Marija Neshkosha",
+      name: "Senior Editor - Find.co",
       role: "Head of Content",
       company: "CryptoManiaks",
       testimonial:
