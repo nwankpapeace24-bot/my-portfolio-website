@@ -125,7 +125,7 @@ const Portfolio = () => {
       tags: ["Jackpots", "High Payouts"],
       featured: false,
       rating: 4.5,
-      link: "https://crypto2community.com/jackpot-sites",
+      link: "https://crypto2community.com/crypto-gambling/boxing-sportsbooks-with-bitcoin/",
     },
     {
       id: 6,
