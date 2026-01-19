@@ -15,8 +15,6 @@ import {
   FiUploadCloud,
   FiX,
   FiExternalLink,
-  FiMenu,
-  FiMoreVertical,
 } from "react-icons/fi";
 import { CldUploadWidget } from "next-cloudinary";
 import {
@@ -119,7 +117,6 @@ export default function AdminDashboard() {
           <div className="flex justify-center py-32"><div className="animate-spin h-12 w-12 border-4 border-gray-100 border-b-writer-sky-blue rounded-full" /></div>
         ) : (
           <>
-            {/* Desktop Table View */}
             <div className="hidden md:block bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm">
               <table className="w-full">
                 <thead>
@@ -163,7 +160,6 @@ export default function AdminDashboard() {
               </table>
             </div>
 
-            {/* Mobile Card View */}
             <div className="md:hidden space-y-4">
               {items.map((item) => (
                 <div key={item.id} className={`bg-white p-4 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-4 ${item.isHidden ? "opacity-60" : ""}`}>
@@ -197,10 +193,9 @@ export default function AdminDashboard() {
         )}
       </main>
 
-      {/* Mobile Bottom Navigation */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around p-2 z-40 pb-safe">
         <MobileTabButton active={activeTab === "portfolio"} onClick={() => setActiveTab("portfolio")} icon={<FiBriefcase size={20} />} label="Portfolio" />
-        <MobileTabButton active={activeTab === "testimonials"} onClick={() => setActiveTab("testimonials")} icon={<FiMessageCircle size={20} />} label="Feedback" />
+        <MobileTabButton active={activeTab === "testimonials"} onClick={() => setActiveTab("testimonials")} icon={<FiMessageCircle size={20} />} label="Testimonials" />
         <button onClick={() => window.open('/', '_blank')} className="flex flex-col items-center p-2 text-gray-400">
           <FiExternalLink size={20} />
           <span className="text-[10px] font-bold mt-1">Site</span>
@@ -230,7 +225,7 @@ function MobileTabButton({ active, onClick, icon, label }: any) {
   );
 }
 
-/* ---------------- MODAL COMPONENT (Updated for Mobile Scroll) ---------------- */
+/* ---------------- MODAL COMPONENT ---------------- */
 
 function Modal({ type, item, onClose, onSuccess }: any) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -320,32 +315,32 @@ function Modal({ type, item, onClose, onSuccess }: any) {
             </div>
           )}
 
-          {/* Render inputs based on type (Logic remains same, styling updated) */}
           {type === "portfolio" ? (
             <>
-              <Input label="Project Title" value={formData.title} onChange={(v: string) => setFormData({...formData, title: v})} />
-              <Input label="Client" value={formData.client} onChange={(v: string) => setFormData({...formData, client: v})} />
-              <Input label="Type" value={formData.type} onChange={(v: string) => setFormData({...formData, type: v})} />
-              <Input label="Link" value={formData.link} onChange={(v: string) => setFormData({...formData, link: v})} />
+              <Input label="Project Title" placeholder="e.g. Bao Casino Review" value={formData.title} onChange={(v: string) => setFormData({...formData, title: v})} />
+              <Input label="Client" placeholder="e.g. CryptoManicks" value={formData.client} onChange={(v: string) => setFormData({...formData, client: v})} />
+              <Input label="Content Type" placeholder="e.g. Case Study" value={formData.type} onChange={(v: string) => setFormData({...formData, type: v})} />
+              <Input label="Live Link" placeholder="https://..." value={formData.link} onChange={(v: string) => setFormData({...formData, link: v})} />
               <div className="md:col-span-2">
-                <Input label="Tags (comma separated)" value={formData.tags} onChange={(v: string) => setFormData({...formData, tags: v})} />
+                <Input label="Tags (comma separated)" placeholder="SEO, Casino, Case Study" value={formData.tags} onChange={(v: string) => setFormData({...formData, tags: v})} />
               </div>
             </>
           ) : (
             <>
-              <Input label="Client Name" value={formData.name} onChange={(v: string) => setFormData({...formData, name: v})} />
-              <Input label="Role" value={formData.role} onChange={(v: string) => setFormData({...formData, role: v})} />
-              <Input label="Company" value={formData.company} onChange={(v: string) => setFormData({...formData, company: v})} />
-              <Input label="Metric" value={formData.metric} onChange={(v: string) => setFormData({...formData, metric: v})} />
+              <Input label="Client Name" placeholder="e.g. John Doe" value={formData.name} onChange={(v: string) => setFormData({...formData, name: v})} />
+              <Input label="Role" placeholder="e.g. Marketing Lead" value={formData.role} onChange={(v: string) => setFormData({...formData, role: v})} />
+              <Input label="Company" placeholder="e.g. TechFlow Inc" value={formData.company} onChange={(v: string) => setFormData({...formData, company: v})} />
+              <Input label="Success Metric" placeholder="e.g. 40% Increase in ROI" value={formData.metric} onChange={(v: string) => setFormData({...formData, metric: v})} />
               <Input label="Rating (1-5)" type="number" step="0.1" value={formData.rating} onChange={(v: string) => setFormData({...formData, rating: v})} />
             </>
           )}
 
           <div className="md:col-span-2 space-y-2">
-            <label className="text-[10px] font-black uppercase text-gray-400 ml-1">Content</label>
+            <label className="text-[10px] font-black uppercase text-gray-400 ml-1">Description</label>
             <textarea
               required
               rows={3}
+              placeholder={type === "portfolio" ? "Briefly describe the project goals and results..." : "Paste the client's testimonial here..."}
               className="w-full border-2 border-gray-100 p-4 rounded-2xl focus:border-writer-sky-blue outline-none text-sm"
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
@@ -354,12 +349,12 @@ function Modal({ type, item, onClose, onSuccess }: any) {
 
           <div className="md:col-span-2 flex gap-4 p-4 bg-gray-50 rounded-2xl border">
             <label className="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" checked={formData.featured} onChange={(e) => setFormData({...formData, featured: e.target.checked})} />
-              <span className="text-sm font-bold">Featured</span>
+              <input type="checkbox" className="w-5 h-5 rounded border-gray-300" checked={formData.featured} onChange={(e) => setFormData({...formData, featured: e.target.checked})} />
+              <span className="text-sm font-bold">Featured on Homepage</span>
             </label>
           </div>
 
-          <button disabled={isSubmitting} className="md:col-span-2 bg-writer-deep-blue text-white py-4 sm:py-5 rounded-2xl font-black uppercase tracking-widest disabled:opacity-50 mb-6">
+          <button disabled={isSubmitting} className="md:col-span-2 bg-writer-deep-blue text-white py-4 sm:py-5 rounded-2xl font-black uppercase tracking-widest disabled:opacity-50 mb-6 active:scale-95 transition-transform">
             {isSubmitting ? "Syncing..." : "Publish Content"}
           </button>
         </form>
