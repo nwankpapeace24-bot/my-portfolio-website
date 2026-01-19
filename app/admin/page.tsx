@@ -15,6 +15,8 @@ import {
   FiUploadCloud,
   FiX,
   FiExternalLink,
+  FiMenu,
+  FiMoreVertical,
 } from "react-icons/fi";
 import { CldUploadWidget } from "next-cloudinary";
 import {
@@ -70,8 +72,16 @@ export default function AdminDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] flex font-body text-writer-deep-blue">
-      {/* Sidebar */}
+    <div className="min-h-screen bg-[#F8FAFC] flex flex-col md:flex-row font-body text-writer-deep-blue">
+      {/* Mobile Header */}
+      <div className="md:hidden bg-writer-deep-blue text-white p-4 flex justify-between items-center sticky top-0 z-40 shadow-md">
+        <h1 className="font-heading font-bold tracking-tight">Peace Admin</h1>
+        <button onClick={() => signOut()} className="p-2 text-red-400">
+          <FiLogOut size={20} />
+        </button>
+      </div>
+
+      {/* Desktop Sidebar */}
       <aside className="w-64 bg-writer-deep-blue text-white p-6 hidden md:flex flex-col sticky top-0 h-screen">
         <Link href="/" className="mb-10 block group">
           <h1 className="text-xl font-heading font-bold group-hover:text-writer-sky-blue transition-colors">Peace Admin</h1>
@@ -91,15 +101,15 @@ export default function AdminDashboard() {
       </aside>
 
       {/* Main Content Area */}
-      <main className="flex-1 p-6 lg:p-12">
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+      <main className="flex-1 p-4 sm:p-6 lg:p-12 pb-24 md:pb-12">
+        <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
-            <h2 className="text-3xl font-heading font-bold capitalize tracking-tight">{activeTab}</h2>
-            <p className="text-sm text-gray-500">Manage content without touching code.</p>
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold capitalize tracking-tight">{activeTab}</h2>
+            <p className="text-xs sm:text-sm text-gray-500">Manage content without touching code.</p>
           </div>
           <button
             onClick={() => { setEditingItem(null); setIsModalOpen(true); }}
-            className="bg-writer-deep-blue text-white px-8 py-3.5 rounded-2xl flex items-center gap-2 font-bold hover:shadow-xl transition-all active:scale-95"
+            className="w-full sm:w-auto bg-writer-deep-blue text-white px-6 py-3 sm:py-3.5 rounded-xl sm:rounded-2xl flex justify-center items-center gap-2 font-bold hover:shadow-xl transition-all active:scale-95"
           >
             <FiPlus size={20} /> Add {activeTab === "portfolio" ? "Project" : "Testimonial"}
           </button>
@@ -108,57 +118,94 @@ export default function AdminDashboard() {
         {loading ? (
           <div className="flex justify-center py-32"><div className="animate-spin h-12 w-12 border-4 border-gray-100 border-b-writer-sky-blue rounded-full" /></div>
         ) : (
-          <div className="bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm">
-            <table className="w-full">
-              <thead>
-                <tr className="bg-gray-50/50 text-[10px] tracking-widest uppercase text-gray-400 border-b">
-                  <th className="p-6 text-left font-bold">Title / Name</th>
-                  <th className="p-6 text-left font-bold">Type / Company</th>
-                  <th className="p-6 text-center font-bold">Status</th>
-                  <th className="p-6 text-right font-bold">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-50">
-  {items.map((item) => (
-    <tr key={item.id} className={`transition-colors hover:bg-gray-50/30 ${item.isHidden ? "opacity-60 bg-gray-50/40" : ""}`}>
-      <td className="p-6">
-        <div className="flex items-center gap-4">
-          {/* Only show image if we are in the portfolio tab */}
-          {activeTab === "portfolio" && (
-            <img 
-              src={item.image || "/placeholder.png"} 
-              className="w-14 h-14 rounded-xl object-cover bg-gray-100 border shadow-sm" 
-              alt="" 
-            />
-          )}
-          <div>
-            <p className="font-bold text-gray-800">{item.title || item.name}</p>
-            <p className="text-[10px] text-gray-400 font-mono">ID: {item.id.substring(0, 8)}</p>
-          </div>
-        </div>
-      </td>
-                    <td className="p-6">
-                      <p className="text-sm font-semibold text-gray-600">{item.type || item.company || "—"}</p>
-                    </td>
-                    <td className="p-6 text-center">
-                      <span className={`px-4 py-1.5 text-[10px] uppercase font-black rounded-full ${item.isHidden ? "bg-red-50 text-red-500" : "bg-green-50 text-green-600"}`}>
-                        {item.isHidden ? "Hidden" : "Live"}
-                      </span>
-                    </td>
-                    <td className="p-6 text-right">
-                      <div className="flex justify-end gap-1">
-                        <ActionButton onClick={() => { setEditingItem(item); setIsModalOpen(true); }} icon={<FiEdit2 size={16} />} />
-                        <ActionButton onClick={() => toggleVisibility(item)} icon={item.isHidden ? <FiEye size={16} /> : <FiEyeOff size={16} />} />
-                        <ActionButton onClick={() => handleDelete(item.id)} icon={<FiTrash2 size={16} />} variant="danger" />
-                      </div>
-                    </td>
+          <>
+            {/* Desktop Table View */}
+            <div className="hidden md:block bg-white rounded-[2rem] border border-gray-100 overflow-hidden shadow-sm">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-gray-50/50 text-[10px] tracking-widest uppercase text-gray-400 border-b">
+                    <th className="p-6 text-left font-bold">Title / Name</th>
+                    <th className="p-6 text-left font-bold">Type / Company</th>
+                    <th className="p-6 text-center font-bold">Status</th>
+                    <th className="p-6 text-right font-bold">Actions</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+                </thead>
+                <tbody className="divide-y divide-gray-50">
+                  {items.map((item) => (
+                    <tr key={item.id} className={`transition-colors hover:bg-gray-50/30 ${item.isHidden ? "opacity-60 bg-gray-50/40" : ""}`}>
+                      <td className="p-6">
+                        <div className="flex items-center gap-4">
+                          {activeTab === "portfolio" && (
+                            <img src={item.image || "/placeholder.png"} className="w-14 h-14 rounded-xl object-cover bg-gray-100 border shadow-sm" alt="" />
+                          )}
+                          <div>
+                            <p className="font-bold text-gray-800">{item.title || item.name}</p>
+                            <p className="text-[10px] text-gray-400 font-mono">ID: {item.id.substring(0, 8)}</p>
+                          </div>
+                        </div>
+                      </td>
+                      <td className="p-6 text-sm font-semibold text-gray-600">{item.type || item.company || "—"}</td>
+                      <td className="p-6 text-center">
+                        <span className={`px-4 py-1.5 text-[10px] uppercase font-black rounded-full ${item.isHidden ? "bg-red-50 text-red-500" : "bg-green-50 text-green-600"}`}>
+                          {item.isHidden ? "Hidden" : "Live"}
+                        </span>
+                      </td>
+                      <td className="p-6 text-right">
+                        <div className="flex justify-end gap-1">
+                          <ActionButton onClick={() => { setEditingItem(item); setIsModalOpen(true); }} icon={<FiEdit2 size={16} />} />
+                          <ActionButton onClick={() => toggleVisibility(item)} icon={item.isHidden ? <FiEye size={16} /> : <FiEyeOff size={16} />} />
+                          <ActionButton onClick={() => handleDelete(item.id)} icon={<FiTrash2 size={16} />} variant="danger" />
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Mobile Card View */}
+            <div className="md:hidden space-y-4">
+              {items.map((item) => (
+                <div key={item.id} className={`bg-white p-4 rounded-2xl border border-gray-100 shadow-sm flex flex-col gap-4 ${item.isHidden ? "opacity-60" : ""}`}>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      {activeTab === "portfolio" && (
+                        <img src={item.image || "/placeholder.png"} className="w-12 h-12 rounded-lg object-cover border" alt="" />
+                      )}
+                      <div>
+                        <p className="font-bold text-gray-900 leading-tight">{item.title || item.name}</p>
+                        <p className="text-[10px] text-gray-400 uppercase tracking-tighter mt-1">{item.type || item.company || "No Category"}</p>
+                      </div>
+                    </div>
+                    <span className={`px-2 py-1 text-[8px] uppercase font-black rounded-md ${item.isHidden ? "bg-red-50 text-red-500" : "bg-green-50 text-green-600"}`}>
+                      {item.isHidden ? "Hidden" : "Live"}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center justify-between border-t pt-3">
+                    <p className="text-[10px] text-gray-300 font-mono">ID: {item.id.substring(0, 8)}</p>
+                    <div className="flex gap-2">
+                       <button onClick={() => { setEditingItem(item); setIsModalOpen(true); }} className="p-2 bg-gray-50 rounded-lg text-gray-600"><FiEdit2 size={16} /></button>
+                       <button onClick={() => toggleVisibility(item)} className="p-2 bg-gray-50 rounded-lg text-gray-600">{item.isHidden ? <FiEye size={16} /> : <FiEyeOff size={16} />}</button>
+                       <button onClick={() => handleDelete(item.id)} className="p-2 bg-red-50 rounded-lg text-red-500"><FiTrash2 size={16} /></button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
         )}
       </main>
+
+      {/* Mobile Bottom Navigation */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t flex justify-around p-2 z-40 pb-safe">
+        <MobileTabButton active={activeTab === "portfolio"} onClick={() => setActiveTab("portfolio")} icon={<FiBriefcase size={20} />} label="Portfolio" />
+        <MobileTabButton active={activeTab === "testimonials"} onClick={() => setActiveTab("testimonials")} icon={<FiMessageCircle size={20} />} label="Feedback" />
+        <button onClick={() => window.open('/', '_blank')} className="flex flex-col items-center p-2 text-gray-400">
+          <FiExternalLink size={20} />
+          <span className="text-[10px] font-bold mt-1">Site</span>
+        </button>
+      </nav>
 
       {isModalOpen && (
         <Modal
@@ -172,8 +219,18 @@ export default function AdminDashboard() {
   );
 }
 
+/* ---------------- MOBILE HELPERS ---------------- */
 
-/* ---------------- MODAL COMPONENT ---------------- */
+function MobileTabButton({ active, onClick, icon, label }: any) {
+  return (
+    <button onClick={onClick} className={`flex flex-col items-center p-2 transition-colors ${active ? "text-writer-sky-blue" : "text-gray-400"}`}>
+      {icon}
+      <span className="text-[10px] font-bold mt-1">{label}</span>
+    </button>
+  );
+}
+
+/* ---------------- MODAL COMPONENT (Updated for Mobile Scroll) ---------------- */
 
 function Modal({ type, item, onClose, onSuccess }: any) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -207,18 +264,17 @@ function Modal({ type, item, onClose, onSuccess }: any) {
           tags: formData.tags.split(",").map(t => t.trim()).filter(Boolean),
         });
       } else {
-        const testimonialData = {
+        await upsertTestimonial({
           id: formData.id || undefined,
           name: formData.name,
           role: formData.role,
           company: formData.company,
           testimonial: formData.description,
           metric: formData.metric,
-          rating: parseInt(formData.rating.toString()),
+          rating: parseFloat(formData.rating.toString()),
           featured: formData.featured,
           isHidden: formData.isHidden,
-        };
-        await upsertTestimonial(testimonialData);
+        });
       }
       onSuccess();
     } catch (err) {
@@ -230,22 +286,21 @@ function Modal({ type, item, onClose, onSuccess }: any) {
   };
 
   return (
-    <div className="fixed inset-0 bg-writer-deep-blue/60 backdrop-blur-md flex items-center justify-center p-4 z-50 overflow-y-auto">
-      <div className="bg-white rounded-[2.5rem] w-full max-w-2xl shadow-2xl my-auto animate-in fade-in zoom-in duration-200">
-        <div className="p-8 border-b flex justify-between items-center">
-          <h3 className="text-2xl font-heading font-bold text-writer-deep-blue">
+    <div className="fixed inset-0 bg-writer-deep-blue/60 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-4 z-50 overflow-y-auto">
+      <div className="bg-white rounded-t-[2rem] sm:rounded-[2.5rem] w-full max-w-2xl shadow-2xl animate-in slide-in-from-bottom sm:zoom-in duration-300 max-h-[95vh] flex flex-col">
+        <div className="p-6 sm:p-8 border-b flex justify-between items-center sticky top-0 bg-white rounded-t-[2rem] z-10">
+          <h3 className="text-xl sm:text-2xl font-heading font-bold text-writer-deep-blue">
             {item ? "Edit" : "Create"} {type === "portfolio" ? "Project" : "Testimonial"}
           </h3>
-          <button onClick={onClose} className="p-3 hover:bg-gray-100 rounded-2xl transition text-gray-400 hover:text-red-500">
+          <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded-xl transition text-gray-400 hover:text-red-500">
             <FiX size={24} />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          
+        <form onSubmit={handleSubmit} className="p-6 sm:p-8 overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {type === "portfolio" && (
-            <div className="md:col-span-2 flex items-center gap-6 bg-gray-50/50 p-6 rounded-[1.5rem] border-2 border-dashed border-gray-200">
-              <div className="w-24 h-24 rounded-2xl bg-white border flex items-center justify-center overflow-hidden">
+            <div className="md:col-span-2 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 bg-gray-50/50 p-4 sm:p-6 rounded-[1.5rem] border-2 border-dashed border-gray-200">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white border flex items-center justify-center overflow-hidden shrink-0">
                 {formData.image ? (
                   <img src={formData.image} className="w-full h-full object-cover" alt="" />
                 ) : (
@@ -257,7 +312,7 @@ function Modal({ type, item, onClose, onSuccess }: any) {
                 onSuccess={(res: any) => setFormData({...formData, image: res.info.secure_url})}
               >
                 {({ open }) => (
-                  <button type="button" onClick={() => open()} className="bg-writer-deep-blue text-white px-5 py-2.5 rounded-xl font-bold text-sm hover:opacity-90 transition">
+                  <button type="button" onClick={() => open()} className="w-full sm:w-auto bg-writer-deep-blue text-white px-5 py-2.5 rounded-xl font-bold text-sm">
                     {formData.image ? "Change Media" : "Upload Media"}
                   </button>
                 )}
@@ -265,134 +320,46 @@ function Modal({ type, item, onClose, onSuccess }: any) {
             </div>
           )}
 
+          {/* Render inputs based on type (Logic remains same, styling updated) */}
           {type === "portfolio" ? (
             <>
-              <Input 
-                label="Project Title" 
-                placeholder="e.g. Bao Casino Review 2025" 
-                value={formData.title} 
-                onChange={(v: string) => setFormData({...formData, title: v})} 
-              />
-              <Input 
-                label="Client" 
-                placeholder="e.g. CryptoManicks or Esports News Hub" 
-                value={formData.client} 
-                onChange={(v: string) => setFormData({...formData, client: v})} 
-              />
-              <Input 
-                label="Type" 
-                placeholder="e.g. Casino Review / Industry Guide" 
-                value={formData.type} 
-                onChange={(v: string) => setFormData({...formData, type: v})} 
-              />
-              <Input 
-                label="Link" 
-                placeholder="https://cryptomaniaks.com/reviews/..." 
-                value={formData.link} 
-                onChange={(v: string) => setFormData({...formData, link: v})} 
-              />
+              <Input label="Project Title" value={formData.title} onChange={(v: string) => setFormData({...formData, title: v})} />
+              <Input label="Client" value={formData.client} onChange={(v: string) => setFormData({...formData, client: v})} />
+              <Input label="Type" value={formData.type} onChange={(v: string) => setFormData({...formData, type: v})} />
+              <Input label="Link" value={formData.link} onChange={(v: string) => setFormData({...formData, link: v})} />
               <div className="md:col-span-2">
-                <Input 
-                  label="Tags (split by comma)" 
-                  placeholder="Crypto, Bitcoin, CS:GO, Featured" 
-                  value={formData.tags} 
-                  onChange={(v: string) => setFormData({...formData, tags: v})} 
-                />
+                <Input label="Tags (comma separated)" value={formData.tags} onChange={(v: string) => setFormData({...formData, tags: v})} />
               </div>
             </>
           ) : (
             <>
-              <Input 
-                label="Client Name" 
-                placeholder="e.g. Sarah Jenkins" 
-                value={formData.name} 
-                onChange={(v: string) => setFormData({...formData, name: v})} 
-              />
-              <Input 
-                label="Role" 
-                placeholder="e.g. Head of Growth" 
-                value={formData.role} 
-                onChange={(v: string) => setFormData({...formData, role: v})} 
-              />
-              <Input 
-                label="Company" 
-                placeholder="e.g. Crypto2Community" 
-                value={formData.company} 
-                onChange={(v: string) => setFormData({...formData, company: v})} 
-              />
-              <Input 
-                label="Success Metric" 
-                placeholder="e.g. 50% increase in lead generation" 
-                value={formData.metric} 
-                onChange={(v: string) => setFormData({...formData, metric: v})} 
-              />
-              <Input 
-  label="Rating (1-5)" 
-  type="number" 
-  min="0"
-  max="5"
-  step="0.1" // Allows for ratings like 4.8
-  placeholder="5.0"
-  value={formData.rating} 
-  onChange={(v: string) => {
-    const val = parseFloat(v);
-    // If user types a number higher than 5, force it to 5
-    if (val > 5) setFormData({...formData, rating: 5});
-    else if (val < 0) setFormData({...formData, rating: 0});
-    else setFormData({...formData, rating: v});
-  }} 
-/>
+              <Input label="Client Name" value={formData.name} onChange={(v: string) => setFormData({...formData, name: v})} />
+              <Input label="Role" value={formData.role} onChange={(v: string) => setFormData({...formData, role: v})} />
+              <Input label="Company" value={formData.company} onChange={(v: string) => setFormData({...formData, company: v})} />
+              <Input label="Metric" value={formData.metric} onChange={(v: string) => setFormData({...formData, metric: v})} />
+              <Input label="Rating (1-5)" type="number" step="0.1" value={formData.rating} onChange={(v: string) => setFormData({...formData, rating: v})} />
             </>
           )}
 
           <div className="md:col-span-2 space-y-2">
-            <label className="text-[10px] font-black uppercase text-gray-400 ml-1">
-              {type === "portfolio" ? "Description" : "Testimonial Content"}
-            </label>
+            <label className="text-[10px] font-black uppercase text-gray-400 ml-1">Content</label>
             <textarea
               required
-              rows={4}
-              placeholder={type === "portfolio" 
-                ? "e.g. Comprehensive review of Bao Casino's crypto gambling features and bonuses..." 
-                : "e.g. Peace transformed our content strategy, resulting in a 7 BTC welcome bonus coverage that doubled our traffic..."
-              }
-              className="w-full border-2 border-gray-100 p-4 rounded-2xl focus:border-writer-sky-blue outline-none text-sm transition-colors placeholder:text-gray-300"
+              rows={3}
+              className="w-full border-2 border-gray-100 p-4 rounded-2xl focus:border-writer-sky-blue outline-none text-sm"
               value={formData.description}
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
             />
           </div>
 
-          <div className="md:col-span-2 flex gap-4 p-5 bg-gray-50 rounded-2xl border">
+          <div className="md:col-span-2 flex gap-4 p-4 bg-gray-50 rounded-2xl border">
             <label className="flex items-center gap-2 cursor-pointer">
-              <input 
-                type="checkbox" 
-                checked={formData.featured} 
-                onChange={(e) => setFormData({
-                    ...formData, 
-                    featured: e.target.checked, 
-                    isHidden: e.target.checked ? false : formData.isHidden
-                })} 
-              />
+              <input type="checkbox" checked={formData.featured} onChange={(e) => setFormData({...formData, featured: e.target.checked})} />
               <span className="text-sm font-bold">Featured</span>
-            </label>
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input 
-                type="checkbox" 
-                checked={formData.isHidden} 
-                onChange={(e) => setFormData({
-                    ...formData, 
-                    isHidden: e.target.checked, 
-                    featured: e.target.checked ? false : formData.featured
-                })} 
-              />
-              <span className="text-sm font-bold text-red-500">Hidden</span>
             </label>
           </div>
 
-          <button 
-            disabled={isSubmitting} 
-            className="md:col-span-2 bg-writer-deep-blue text-white py-5 rounded-[1.5rem] font-black uppercase tracking-widest disabled:opacity-50 hover:shadow-lg transition-all active:scale-[0.98]"
-          >
+          <button disabled={isSubmitting} className="md:col-span-2 bg-writer-deep-blue text-white py-4 sm:py-5 rounded-2xl font-black uppercase tracking-widest disabled:opacity-50 mb-6">
             {isSubmitting ? "Syncing..." : "Publish Content"}
           </button>
         </form>
@@ -401,19 +368,18 @@ function Modal({ type, item, onClose, onSuccess }: any) {
   );
 }
 
-/* ---------------- HELPERS ---------------- */
+/* ---------------- SHARED HELPERS ---------------- */
 
-function Input({ label, value, onChange, placeholder, type = "text", min, max }: any) {
+function Input({ label, value, onChange, placeholder, type = "text", step }: any) {
   return (
     <div className="space-y-1">
       <label className="text-[10px] font-black uppercase text-gray-400 ml-1">{label}</label>
       <input 
         type={type} 
+        step={step}
         required 
-        min={min} // Added this
-        max={max} // Added this
         placeholder={placeholder}
-        className="w-full border-2 border-gray-100 p-4 rounded-2xl focus:border-writer-sky-blue outline-none text-sm transition-all placeholder:text-gray-300" 
+        className="w-full border-2 border-gray-100 p-3 sm:p-4 rounded-xl sm:rounded-2xl focus:border-writer-sky-blue outline-none text-sm transition-all" 
         value={value} 
         onChange={(e) => onChange(e.target.value)} 
       />

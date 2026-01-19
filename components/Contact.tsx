@@ -154,7 +154,7 @@ const Contact = () => {
                   className="relative w-72 h-72 sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] rounded-full overflow-hidden shadow-2xl border-[12px] border-white"
                 >
                   <Image
-                    src="/img-1.jpg"
+                    src="/4.jpeg"
                     alt="Peace Nwankpa"
                     fill
                     className="object-cover object-top"

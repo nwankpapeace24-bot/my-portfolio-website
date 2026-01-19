@@ -97,7 +97,7 @@ const WhoIAm = () => {
               >
                 <div className="relative w-full h-[400px] sm:h-[500px] lg:h-[600px] rounded-xl sm:rounded-2xl overflow-hidden">
                   <Image
-                    src="/img-5.jpg"
+                    src="/2.jpeg"
                     alt="Peace Nwankpa - Professional Writer"
                     fill
                     className="object-cover object-top"

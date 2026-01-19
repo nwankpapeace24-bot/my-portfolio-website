@@ -197,7 +197,7 @@ const Hero = () => {
               >
                 <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] rounded-xl sm:rounded-2xl overflow-hidden">
                   <Image
-                    src="/img-4.jpg"
+                    src="/hero.jpeg"
                     alt="Peace Nwankpa - iGaming, Crypto & Esports Writer"
                     fill
                     className="object-cover object-top"
