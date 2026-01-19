@@ -9,19 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Re-mapping the primary scale to the new warm earth tones
         primary: {
-          50: "#EDEBF5",
-          100: "#ADBBDA",
-          200: "#8697C4",
-          300: "#7091E6",
-          400: "#3D52A0",
+          50: "#FFDBBB",   // Lightest (Peach)
+          100: "#CCBEB1",  // Light (Tan/Neutral)
+          200: "#997E67",  // Medium (Bronze)
+          300: "#664930",  // Dark (Espresso)
+          400: "#4a3523",  // Deepest (Dark Cocoa)
         },
         writer: {
-          "deep-blue": "#3D52A0",
-          "sky-blue": "#7091E6",
-          cornflower: "#8697C4",
-          lavender: "#ADBBDA",
-          powder: "#EDEBF5",
+          /* Mapping these strategically so the 'Deep Blue' areas 
+             become the bold 'Espresso' color.
+          */
+          "deep-blue": "#664930",    // Your Darkest Color (Primary Text/Buttons)
+          "sky-blue": "#997E67",     // Your Medium Bronze (Accents/Hovers)
+          cornflower: "#CCBEB1",     // Your Neutral Tan (Secondary/Borders)
+          lavender: "#E6D5C5",       // A slightly lighter tint for gradients
+          powder: "#FFDBBB",         // Your Lightest Peach (Backgrounds)
         },
       },
       fontFamily: {
@@ -52,8 +56,9 @@ const config: Config = {
           "50%": { transform: "translateY(-20px)" },
         },
         glow: {
-          "0%": { boxShadow: "0 0 5px #7091E6" },
-          "100%": { boxShadow: "0 0 20px #7091E6, 0 0 30px #7091E6" },
+          // Glow now uses the bronze tone instead of blue
+          "0%": { boxShadow: "0 0 5px #997E67" },
+          "100%": { boxShadow: "0 0 20px #997E67, 0 0 30px #997E67" },
         },
       },
     },

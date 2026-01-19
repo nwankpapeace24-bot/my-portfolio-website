@@ -8,6 +8,7 @@ import {
 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Providers } from "@/components/Providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -224,8 +225,8 @@ export default function RootLayout({
         />
       </head>
       <body className={`${rubik.className} antialiased`}>
-        <Navbar />
-        {children}
+        {/* <Navbar /> */}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

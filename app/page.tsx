@@ -5,10 +5,12 @@ import WhoIAm from "@/components/WhoIAm";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
 import Brands from "@/components/Brands";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <main>
+      <Navbar />
       <Hero />
       <WhoIAm />
       <Services />

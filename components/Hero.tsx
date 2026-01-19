@@ -146,7 +146,7 @@ const Hero = () => {
                 <span className="block text-gradient">Peace Nwankpa</span>
               </h1>
               <motion.div
-                className="mono-text text-xs sm:text-sm text-writer-cornflower opacity-80"
+                className="mono-text text-xs sm:text-sm text-writer-deep-blue opacity-80"
                 variants={itemVariants}
               >
                 ✍️ Writer | Gaming Aficionado | Crypto Analyst
