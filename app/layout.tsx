@@ -164,9 +164,9 @@ export const metadata: Metadata = {
   // Additional structured data
   other: {
     "application-name": siteConfig.name,
-    "msapplication-TileColor": "#3D52A0",
-    "theme-color": "#3D52A0",
-    "msapplication-TileImage": "/logo.jpg", // Using logo for Windows tiles
+    "msapplication-TileColor": "#664930", // Change from #3D52A0
+    "theme-color": "#664930",             // Change from #3D52A0
+    "msapplication-TileImage": "/logo.jpg",
   },
 };
 
@@ -186,7 +186,7 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content={siteConfig.name} />
 
         {/* Structured Data - JSON-LD */}
